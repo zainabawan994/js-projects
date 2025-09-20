@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="qr.css">  
+</head>
+<body>
+    <div class="main">
+       
+        <div class="sub">
+            <h1> Generate QR CODE<br><span style="color: rgba(0, 128, 0, 0.836);">By Entering URL</span></h1>
+            <input type="text" id="inp" placeholder="Enter URL">
+            <button onclick="myQr()">Generate</button>
+            <img src="" id="img" >
+        </div>
+    </div>
+    <script>
+        let input=document.getElementById("inp");
+        let image=document.getElementById("img");
+
+        function myQr(){
+            let value=input.value;
+
+            if (value){
+                img.src=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${value}`;
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
